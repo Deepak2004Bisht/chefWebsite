@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Chef Pankaj — authentic Indian recipes, food stories, travel experiences and a chef's special menu. A premium bilingual food blog and portfolio." />
+  <meta name="keywords" content="chef portfolio, indian recipes, food blog, travel food, street food, cooking" />
+  <meta name="author" content="Chef Pankaj" />
+  <meta property="og:title" content="Chef Pankaj — Recipes, Stories & Travel" />
+  <meta property="og:description" content="Authentic recipes, food stories and travel experiences from Chef Pankaj." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Chef Pankaj — Premium Food Blog & Chef Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ============ LOADING SCREEN ============ -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader__plate">🍲</div>
+    <p class="loader__text">Chef Pankaj</p>
+  </div>
+
+  <!-- ============ SCROLL PROGRESS ============ -->
+  <div id="progress" class="scroll-progress"></div>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header id="header" class="header">
+    <div class="container header__inner">
+      <a href="#home" class="logo">
+        <span class="logo__mark">🍴</span>
+        <span class="logo__text">Chef Pankaj</span>
+      </a>
+
+      <nav id="nav" class="nav" aria-label="Main navigation">
+        <button id="navClose" class="nav__close" aria-label="Close menu">✕</button>
+        <a href="#home" class="nav__link" data-i18n="nav_home">Home</a>
+        <a href="#recipes" class="nav__link" data-i18n="nav_recipes">Recipes</a>
+        <a href="#blog" class="nav__link" data-i18n="nav_blog">Blog</a>
+        <a href="#travel" class="nav__link" data-i18n="nav_travel">Travel</a>
+        <a href="#menu" class="nav__link" data-i18n="nav_menu">Menu</a>
+        <a href="#about" class="nav__link" data-i18n="nav_about">About</a>
+        <a href="#contact" class="nav__link" data-i18n="nav_contact">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <button id="searchBtn" class="icon-btn" aria-label="Search">🔍</button>
+        <button id="langBtn" class="lang-btn" aria-label="Switch language">EN&nbsp;|&nbsp;<span>हिंदी</span></button>
+        <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ SEARCH OVERLAY ============ -->
+  <div id="searchOverlay" class="search-overlay">
+    <div class="search-box">
+      <input id="searchInput" type="text" placeholder="Search recipes, blogs, travel…" data-i18n-ph="search_ph" aria-label="Search" />
+      <button id="searchClose" class="icon-btn" aria-label="Close search">✕</button>
+    </div>
+    <div id="searchResults" class="search-results"></div>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section id="home" class="hero">
+    <div class="hero__overlay"></div>
+    <span class="float-icon" style="top:18%;left:8%">🍅</span>
+    <span class="float-icon" style="top:30%;right:10%">🌿</span>
+    <span class="float-icon" style="bottom:22%;left:14%">🧄</span>
+    <span class="float-icon" style="bottom:28%;right:16%">🌶️</span>
+    <div class="container hero__content">
+      <p class="hero__eyebrow" data-i18n="hero_eyebrow">Welcome to</p>
+      <h1 class="hero__title"><span data-i18n="hero_chef">Chef</span> Pankaj</h1>
+      <p class="hero__typed"><span id="typed"></span><span class="cursor">|</span></p>
+      <p class="hero__sub" data-i18n="hero_sub">Authentic Recipes • Food Stories • Travel Experiences</p>
+      <div class="hero__btns">
+        <a href="#recipes" class="btn btn--primary ripple" data-i18n="hero_btn1">Explore Recipes</a>
+        <a href="#blog" class="btn btn--ghost ripple" data-i18n="hero_btn2">Read Blog</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED RECIPES ============ -->
+  <section id="recipes" class="section">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__tag" data-i18n="tag_recipes">Featured</span>
+        <h2 class="section__title" data-i18n="title_recipes">Signature Recipes</h2>
+        <p class="section__desc" data-i18n="desc_recipes">Hand-picked dishes loved by our community of home cooks.</p>
+      </div>
+      <div id="recipeFilters" class="filters reveal"></div>
+      <div id="recipeGrid" class="grid grid--cards"></div>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORIES ============ -->
+  <section id="categories" class="section section--cream">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__tag" data-i18n="tag_cats">Browse</span>
+        <h2 class="section__title" data-i18n="title_cats">Recipe Categories</h2>
+      </div>
+      <div id="categoryGrid" class="grid grid--cats"></div>
+    </div>
+  </section>
+
+  <!-- ============ BLOG ============ -->
+  <section id="blog" class="section">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__tag" data-i18n="tag_blog">Journal</span>
+        <h2 class="section__title" data-i18n="title_blog">Latest Blog Posts</h2>
+        <p class="section__desc" data-i18n="desc_blog">Kitchen wisdom, stories and tips from the pass.</p>
+      </div>
+      <div id="blogGrid" class="grid grid--cards"></div>
+    </div>
+  </section>
+
+  <!-- ============ TRAVEL ============ -->
+  <section id="travel" class="section section--cream">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__tag" data-i18n="tag_travel">On the road</span>
+        <h2 class="section__title" data-i18n="title_travel">Travel & Food Stories</h2>
+      </div>
+      <div id="travelGrid" class="grid grid--cards"></div>
+    </div>
+  </section>
+
+  <!-- ============ MENU ============ -->
+  <section id="menu" class="section">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__tag" data-i18n="tag_menu">Taste</span>
+        <h2 class="section__title" data-i18n="title_menu">Chef's Special Menu</h2>
+      </div>
+      <div id="menuFilters" class="filters reveal"></div>
+      <div id="menuGrid" class="grid grid--cards"></div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section section--cream">
+    <div class="container about">
+      <div class="about__media reveal">
+        <img src="images/dp.jpg" alt="Portrait of Chef Pankaj" width="900" height="700" loading="lazy" />
+      </div>
+      <div class="about__body reveal">
+        <span class="section__tag" data-i18n="tag_about">The Chef</span>
+        <h2 class="section__title" data-i18n="title_about">About Pankaj</h2>
+        <p data-i18n="about_p1">With over fifteen years across street corners and fine-dining kitchens, Chef Pankaj blends tradition with modern technique. His food is honest, spice-forward and made to bring people together.</p>
+        <p data-i18n="about_p2">Trained in classical Indian cuisine and seasoned by travels across the subcontinent, he now shares recipes, stories and the joy of cooking with home chefs everywhere.</p>
+        <ul class="about__list">
+          <li data-i18n="about_l1">🏆 National Culinary Excellence Award</li>
+          <li data-i18n="about_l2">🎓 Certified Master Chef, IHM</li>
+          <li data-i18n="about_l3">🌍 Featured in 12 food magazines</li>
+        </ul>
+        <div class="counters">
+          <div class="counter"><span class="counter__num" data-target="480">0</span><small data-i18n="c1">Recipes Published</small></div>
+          <div class="counter"><span class="counter__num" data-target="15">0</span><small data-i18n="c2">Years Experience</small></div>
+          <div class="counter"><span class="counter__num" data-target="24">0</span><small data-i18n="c3">Countries Visited</small></div>
+          <div class="counter"><span class="counter__num" data-target="150" data-suffix="K">0</span><small data-i18n="c4">Happy Readers</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section class="section newsletter">
+    <div class="container newsletter__inner reveal">
+      <h2 class="section__title" data-i18n="title_news">Join the Kitchen Club</h2>
+      <p data-i18n="desc_news">Fresh recipes and stories delivered to your inbox every week.</p>
+      <form id="newsletterForm" class="newsletter__form" novalidate>
+        <input type="text" id="nlName" placeholder="Your name" data-i18n-ph="ph_name" required />
+        <input type="email" id="nlEmail" placeholder="Your email" data-i18n-ph="ph_email" required />
+        <button type="submit" class="btn btn--primary ripple" data-i18n="btn_sub">Subscribe</button>
+      </form>
+      <p id="nlMsg" class="form-msg"></p>
+    </div>
+  </section>
+
+  <!-- ============ SOCIAL ============ -->
+  <section id="social" class="section section--cream">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__tag" data-i18n="tag_social">Follow along</span>
+        <h2 class="section__title" data-i18n="title_social">Social Media</h2>
+      </div>
+      <div id="socialGrid" class="grid grid--social"></div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section">
+    <div class="container contact">
+      <div class="contact__info reveal">
+        <span class="section__tag" data-i18n="tag_contact">Say hello</span>
+        <h2 class="section__title" data-i18n="title_contact">Get In Touch</h2>
+        <ul class="contact__list">
+          <li>📍 <span data-i18n="ct_addr">42 Saffron Street, Jaipur, India</span></li>
+          <li>📞 <span>+91 999 925 1524</span></li>
+          <li>✉️ <span>chefpankaj979@gmail.com</span></li>
+        </ul>
+        <div class="map-placeholder" role="img" aria-label="Map location placeholder">🗺️ <span data-i18n="map">Map placeholder</span></div>
+      </div>
+      <form id="contactForm" class="contact__form reveal" novalidate>
+        <input type="text" id="cName" placeholder="Name" data-i18n-ph="ph_name" required />
+        <input type="email" id="cEmail" placeholder="Email" data-i18n-ph="ph_email" required />
+        <input type="tel" id="cPhone" placeholder="Phone" data-i18n-ph="ph_phone" />
+        <input type="text" id="cSubject" placeholder="Subject" data-i18n-ph="ph_subject" required />
+        <textarea id="cMessage" rows="4" placeholder="Message" data-i18n-ph="ph_message" required></textarea>
+        <button type="submit" class="btn btn--primary ripple" data-i18n="btn_send">Send Message</button>
+        <p id="contactMsg" class="form-msg"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="#home" class="logo logo--light"><span class="logo__mark">🍴</span><span class="logo__text">Chef Pankaj</span></a>
+        <p class="footer__about" data-i18n="foot_about">Authentic recipes, food stories and travel experiences — cooked with love.</p>
+      </div>
+      <div>
+        <h4 data-i18n="foot_quick">Quick Links</h4>
+        <a href="#recipes" data-i18n="nav_recipes">Recipes</a>
+        <a href="#blog" data-i18n="nav_blog">Blog</a>
+        <a href="#travel" data-i18n="nav_travel">Travel</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+      </div>
+      <div>
+        <h4 data-i18n="foot_cats">Categories</h4>
+        <a href="#categories" data-i18n="cat_break">Breakfast</a>
+        <a href="#categories" data-i18n="cat_dinner">Dinner</a>
+        <a href="#categories" data-i18n="cat_dessert">Desserts</a>
+        <a href="#categories" data-i18n="cat_street">Street Food</a>
+      </div>
+      <div>
+        <h4 data-i18n="foot_follow">Follow</h4>
+        <a href="#social">Instagram</a>
+        <a href="#social">YouTube</a>
+        <a href="#social">Facebook</a>
+        <a href="#social">Pinterest</a>
+      </div>
+    </div>
+    <p class="footer__copy">© <span id="year"></span> Chef Pankaj. <span data-i18n="rights">All rights reserved.</span></p>
+  </footer>
+
+  <button id="toTop" class="to-top" aria-label="Back to top">↑</button>
+
+  <!-- ============ READ MORE MODAL ============ -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button id="modalClose" class="modal__close" aria-label="Close">✕</button>
+      <div class="modal__slider">
+        <div id="modalSlides" class="modal__slides"></div>
+        <button id="modalPrev" class="modal__nav modal__nav--prev" aria-label="Previous image">‹</button>
+        <button id="modalNext" class="modal__nav modal__nav--next" aria-label="Next image">›</button>
+        <div id="modalDots" class="modal__dots"></div>
+      </div>
+      <div class="modal__body">
+        <span id="modalBadge" class="modal__badge"></span>
+        <h3 id="modalTitle" class="modal__title"></h3>
+        <div id="modalMeta" class="modal__meta"></div>
+        <div id="modalContent" class="modal__content"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
