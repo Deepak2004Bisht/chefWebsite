@@ -190,6 +190,7 @@ ul { list-style: none; }
   color: var(--orange-dk); background: rgba(232,114,44,0.12); padding: 6px 16px; border-radius: 999px; margin-bottom: 14px;
 }
 .section__title { font-family: var(--head); font-weight: 700; font-size: clamp(1.9rem, 4vw, 2.9rem); color: var(--green); }
+.section__heading { font-family: var(--head); font-weight: 700; font-size: clamp(1rem, 3vw, 1rem); color: var(--green); }
 .section__desc { color: var(--muted); margin-top: 10px; }
 
 /* ---------------- FILTERS ---------------- */
