@@ -367,7 +367,7 @@ const SITE_DATA = {
     handle: "Cooking Ride",
     icon: "📷",
     cls: "instagram",
-    link: "https://www.instagram.com/thecookingride?igsh=MTdkbjI1bzh5MHhyOA%3D%3D"
+    link: "https://www.instagram.com/chefpankaj01?igsh=MTYweGF3bGhpanI3eA%3D%3D&utm_source=qr"
   },
   {
     name: "Facebook",
@@ -381,7 +381,7 @@ const SITE_DATA = {
     handle: "@thecookingride7033",
     icon: "▶️",
     cls: "youtube",
-    link: "https://www.youtube.com/@thecookingride7033"
+    link: "https://www.youtube.com/@chefpankaj9173"
   },
   {
     name: "LinkedIn",
@@ -395,7 +395,7 @@ const SITE_DATA = {
     handle: "thecookingride1267",
     icon: "📌",
     cls: "pinterest",
-    link: "https://in.pinterest.com/thecookingride1267/?invite_code=c81458ec6644417e8a22c8b1d2377c96&sender=718605821700981679"
+    link: "https://in.pinterest.com/chefpankaj979/?invite_code=afd396cde903445eb879367880e5b206&sender=988681061854694610"
   }
 ]
 };
