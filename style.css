@@ -140,7 +140,10 @@ ul { list-style: none; }
 .hero {
   position: relative; min-height: 100vh; display: grid; place-items: center; text-align: center;
   color: var(--white); overflow: hidden;
-  background: url("images/hero.jpg") center/cover no-repeat fixed;
+  background: url("images/image.jpeg");
+  background-size: cover; 
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 .hero__overlay {
   position: absolute; inset: 0;
