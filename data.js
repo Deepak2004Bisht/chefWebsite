@@ -364,7 +364,7 @@ const SITE_DATA = {
   socials: [
   {
     name: "Instagram",
-    handle: "Cooking Ride",
+    handle: "Chef pankaj prajapati",
     icon: "📷",
     cls: "instagram",
     link: "https://www.instagram.com/chefpankaj01?igsh=MTYweGF3bGhpanI3eA%3D%3D&utm_source=qr"
@@ -378,7 +378,7 @@ const SITE_DATA = {
   },
   {
     name: "YouTube",
-    handle: "@thecookingride7033",
+    handle: "@chefpankaj9173",
     icon: "▶️",
     cls: "youtube",
     link: "https://www.youtube.com/@chefpankaj9173"
@@ -392,7 +392,7 @@ const SITE_DATA = {
   },
   {
     name: "Pinterest",
-    handle: "thecookingride1267",
+    handle: "chefpankaj979",
     icon: "📌",
     cls: "pinterest",
     link: "https://in.pinterest.com/chefpankaj979/?invite_code=afd396cde903445eb879367880e5b206&sender=988681061854694610"
